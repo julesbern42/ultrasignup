@@ -1,6 +1,5 @@
 numpy
 pandas
-cPickle
 sklearn.ensemble
 requests
 flask
