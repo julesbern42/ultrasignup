@@ -1,4 +1,5 @@
 from flask import Flask, render_template, send_from_directory, request, jsonify
+import os
 import numpy as np
 import json
 import sys
@@ -163,4 +164,5 @@ if __name__ == '__main__':
     filename2 = 'model/Finish_model.pkl'
     #DNS_model = load_model(filename)
     Finish_model = load_model(filename2)
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
